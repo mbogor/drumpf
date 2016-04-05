@@ -1,0 +1,8 @@
+<div>
+	<h2>Current Selections</h2>
+	<ul ng-repeat = 'selection in selections track by $index'>
+		<li>Replace this: {{selection.o}} With this: {{selection.f}}<button id="delete" class="btn btn-sm" ng-click='delete()'>Delete</button></li>
+	</ul>
+	<button id="homeBack" class="btn btn-default" ng-click="back()">Back</button>
+
+</div>

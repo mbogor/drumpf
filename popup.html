@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-csp>
+  <head>
+    <title>DrumpfDrumpfDrumpf</title>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <!-- angular -->
+    <script src="angular.min.js"></script>
+    <script src="angular-ui-router.min.js"></script>
+    <script src="angular-ui-router.js"></script>
+    <!-- jquery -->
+    <script src="jquery-2.2.0.min.js"></script>
+    <!-- popup script -->
+    <script src="popup.js"></script>
+    <div class="title">
+    </div>
+  </head>
+  <body ng-app="DrumpfEx" class='container wrapper'>
+    <div id="main" ui-view>
+
+    <form id="replacement-form" ng-submit="SendReplace(replace)" ng-controller="ReplaceCtrl">
+    <div class='package'>
+    <p>What word do you want to replace?</p>
+
+    <input type="text" ng-model="replace.old">
+
+    </div>
+    <div class='package'>
+    <p>With what word?</p>
+
+    <input type="text" ng-model="replace.fresh">
+
+    </div>
+    <div class='package'>
+    <button type="submit"  id="submit" class="btn btn-sm btn-success">Replace!</button>
+    </div>
+    </form>
+    </div>
+  </body>
+</html>
+
+
+
+
+

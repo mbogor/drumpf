@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Drumpf & Co.",
+  "description": "Make Trump Drumpf Again...and more",
+  "version": "2.0",
+
+  "browser_action": {
+    "default_icon": "rsz_orange.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-2.2.0.min.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["jquery.min.js"],
+  "permissions": [
+    "storage",
+    "https://ajax.googleapis.com/",
+    "activeTab",
+    "tabs", "http://*/*", "https://*/*"
+  ]
+}
